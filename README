@@ -1,0 +1,13 @@
+Denis Bakhvalov has an intriguing programming contest[1] running, but the
+"large" test data set is a dump[2] of Hungarian Wikipedia.  That clocks in at 5.7G
+on a not-particularly-wide pipe.
+
+I've downloaded this, compressed it (gzip --best), split it into 40MB chunks and
+tossed it up on github.  To restore the file after cloning this repo:
+
+    cat ??? >> large.data.gz
+    gunzip large.data.gz
+
+[1] https://easyperf.net/blog/2022/05/28/Performance-analysis-and-tuning-contest-6
+[2] http://dumps.wikimedia.org/huwiki/latest/huwiki-latest-pages-meta-current.xml.bz2
+
